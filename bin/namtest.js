@@ -12,10 +12,7 @@ var argv = require('optimist')
 
 var namtest = require('../lib/index.js');
 
-//Load app
-console.log('Work Dir: ' + process.cwd());
-
-//Run tests
-console.log('Running Tests');
-
-namtest.runTests(argv.d);
+//TODO: Allow relative dir paths for d
+namtest.run(argv.d, 
+    '/users/roneill/documents/src/namtest/sample-app',
+    argv.t);
