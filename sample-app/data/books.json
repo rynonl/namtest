@@ -1,0 +1,7 @@
+{
+    success: true,
+    users: [
+      {id: 1, name: 'Coders at Work', author: 'Peter Siebel'},
+			{id: 2, name: 'The Art of Agile Development', author: 'Shore & Warden'}
+    ]
+}

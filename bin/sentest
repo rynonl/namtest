@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import json
+import subprocess
+
+if len(sys.argv) < 3:
+	print 'Please supply a test directory and application target'
+	print 'Try: sentest {path/to/test/files} {path/to/app/target/index.html}'
+	sys.exit('Process terminated')
+
+test_path_arg = sys.argv[1]
+
+sentest_path = os.path.abspath(os.path.join(__file__, '..'))
+
+sentest_command = []
+sentest_command.append('node')
+sentest_command.append(os.path.join(sentest_path, 'bootstrap.js'))
+sentest_command.append(test_path_arg)
+
+try:
+	os.execvp(sentest_command[0], sentest_command)
+except:
+    print "Unexpected error:", sys.exc_info()[0]
+    raise
+ 
