@@ -3,14 +3,14 @@ module.exports.setUp = function() {
 };
 
 module.exports.tests = [
-	function sampleTest11(assert) {
+	function sampleTest11() {
 		
-			assert.areEqual(1, 2);
+		document.assert.areEqual(1, 2);
 		return assert;
 	},
-	function sampleTest21(assert) {		
+	function sampleTest21() {		
 		
-		assert.areEqual("Hello", "Hello");
+		document.assert.areEqual("Hello", "Hello");
 		return assert;
 	}
 ];
