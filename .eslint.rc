@@ -1,0 +1,9 @@
+module.exports = {
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "no-mixed-spaces-and-tabs": [0],
+        "no-undef": [0]
+    }
+};
